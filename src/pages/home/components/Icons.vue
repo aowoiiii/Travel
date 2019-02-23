@@ -2,14 +2,12 @@
     <div class="icons">
       <swiper>
         <swiper-slide v-for="(page, index) of pages" :key="index">
-
           <div class="icon" v-for="item of page" :key="item.id">
             <div class="icon-img">
               <img class="icon-img-content" :src="item.imgUrl">
             </div>
             <p class="icon-desc">{{item.desc}}</p>
           </div>
-
         </swiper-slide>
       </swiper>
     </div>
@@ -95,7 +93,7 @@ export default {
     height 0
     padding-bottom 50%
   .icons
-    touch-action none
+    touch-action none //点击滑动谜之错误解决
     .icon
       position relative
       overflow hidden
