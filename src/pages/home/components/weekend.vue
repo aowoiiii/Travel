@@ -2,7 +2,7 @@
   <div class="">
     <div class="title">周末去哪儿</div>
     <ul>
-      <li class="item border-bottom" v-for="item of weekendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl">
         </div>
@@ -18,27 +18,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      weekendList: [{
-        id: '0001',
-        title: '京城周末撒欢',
-        desc: '在帝都过周末，不仅仅是城中游！',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1811/f3/86173f863bef61.jpg_r_640x214_52b003ac.jpg'
-      },
-      {
-        id: '0002',
-        title: '北京欢乐谷',
-        desc: '亚洲唯一飞行式过山车等你来挑战',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg'
-      },
-      {
-        id: '0003',
-        title: '金隅凤山温泉',
-        desc: '',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1510/8e/8eea8eb6f41698290.img.jpg_200x200_595cfa1d.jpg'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
@@ -46,7 +27,7 @@ export default {
 <style lang="stylus" scoped>
   @import "~styles/mixins.styl"
   .title
-    margin-top .2rem
+    /*margin-top .2rem*/
     line-height .8rem
     background #eee
     text-indent .2rem
