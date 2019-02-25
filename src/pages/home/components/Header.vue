@@ -9,6 +9,7 @@
     </div>
     <router-link to="/city">
       <div class="header-right">
+        <!--&lt;!&ndash;{{this.$store.state.city}}&ndash;&gt; 后由...mapState(['city'])改写(vuex)-->
         {{this.city}}
         <span class="iconfont arrow-icon">&#xe6aa;</span>
       </div>
@@ -17,15 +18,20 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   name: 'HomeHeader',
   props: {
-    city: String
+    // city: String
+  },
+  computed: {
+    ...mapState(['city'])
   }
 }
 </script>
 
 <style lang="stylus" scoped>
+
   @import "~styles/varibles.styl" //引入其他CSS要加~ styles的设置在webpack.base.conf.js
   .header
     line-height $headerHeight
@@ -48,7 +54,8 @@ export default {
       border-radius .1rem
       color #ccc
     .header-right
-      width 1.24rem
+      min-width 1.04rem
+      padding 0 .1rem
       float right
       text-align center
       color #fff
