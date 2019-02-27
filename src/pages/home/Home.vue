@@ -12,8 +12,8 @@
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
-import HomeRecommend from './components/recommend'
-import HomeWeekend from './components/weekend'
+import HomeRecommend from './components/Rcommend'
+import HomeWeekend from './components/Weekend'
 import axios from 'axios'
 import {mapState} from 'vuex'
 export default {
