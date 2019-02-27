@@ -36,7 +36,10 @@ export default {
     }
   },
   activated () {
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('scroll', this.handleScroll) // window全局可能影响外部组件
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll) // 解决上面的影响
   }
 }
 </script>
