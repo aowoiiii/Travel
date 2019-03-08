@@ -3,14 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import fastclick from 'fastclick'
+import fastclick from 'fastclick' // 点击延迟解决
 import VueAwesomeSwiper from 'vue-awesome-swiper' // 轮播插件
 import store from './store' // vuex
 
-import 'styles/reset.css'
-import 'styles/border.css'
-import 'styles/iconfont.css'
-import 'swiper/dist/css/swiper.css' // 轮播插件
+import 'styles/reset.css' // css 重置
+import 'styles/border.css' // 消除1边框问题
+import 'styles/iconfont.css' // 字体图标
+import 'swiper/dist/css/swiper.css' // 轮播插件css
 
 Vue.config.productionTip = false
 fastclick.attach(document.body)
