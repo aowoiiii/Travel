@@ -29,7 +29,6 @@ export default {
   },
   methods: {
     handleCityClick (city) {
-      // this.$store.commit('changeCity', city) //后由...mapMutations(['changeCity']) (vuex)改写
       this.changeCity(city)
       this.$router.push('/')
     },
@@ -44,7 +43,6 @@ export default {
     keyword () {
       if (this.timer) {
         clearTimeout(this.timer)
-        // console.log(clearTimeout)
       }
       if (!this.keyword) {
         this.list = []
@@ -98,5 +96,4 @@ export default {
       padding-left .2rem
       background #fff
       color #666
-
 </style>

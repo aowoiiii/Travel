@@ -31,6 +31,10 @@
 
 <script>
 import Bscroll from 'better-scroll'
+/**
+ * mapState =>vuex官方api 数据存储
+ * mapMutations =>vuex官方api 方法
+ */
 import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'CityList',
@@ -41,13 +45,18 @@ export default {
   },
   methods: {
     handleCityClick (city) {
-      // this.$store.commit('changeCity', city) //后由...mapMutations(['changeCity']) (vuex)改写
       this.changeCity(city)
       this.$router.push('/')
     },
+    /**
+     * 方法的映射
+     */
     ...mapMutations(['changeCity'])
   },
   computed: {
+    /**
+     * 把city的数据映射到名叫currentCity的计算属性中
+     */
     ...mapState({
       currentCity: 'city'
     })
@@ -62,7 +71,6 @@ export default {
   },
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper)
-    // console.log(this.cities)
   }
 }
 </script>

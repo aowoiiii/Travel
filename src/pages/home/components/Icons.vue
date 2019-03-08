@@ -58,7 +58,6 @@ export default {
       height 0
       float left
       padding-bottom 25%
-      /*background red*/
       .icon-img
         position absolute
         top 0
@@ -67,7 +66,6 @@ export default {
         bottom .44rem
         box-sizing border-box
         padding .1rem
-        /*background blue*/
         .icon-img-content
           display block
           margin 0 auto
